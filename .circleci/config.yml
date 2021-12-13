@@ -60,8 +60,8 @@ jobs:
             php artisan key:generate
            
       # prepare the database
-      - run: touch storage/testing.sqlite
-      - run: php artisan migrate --env=testing --database=sqlite_testing --force
+      - run: touch database/database.sqlite
+      - run: php artisan migrate --database=sqlite --force
     
       - run:
           name: "Generate Passport encryption keys"
